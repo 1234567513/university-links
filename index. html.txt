@@ -1,0 +1,228 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected South African Universities Application Links</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: none; /* Initially hide the content */
+        }
+        h1 {
+            color: darkblue;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            text-decoration: none;
+            background-color: navy;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>South African Universities Application Portal</h1>
+    <div id="university-links"></div>
+
+    <script>
+        // Password to access the page
+        const password = "shandi030615";
+
+        // Prompt user for password
+        const userPassword = prompt("Enter the password to access this page:");
+
+        if (userPassword === password) {
+            // Show the page content if the password is correct
+            document.body.style.display = "block";
+
+            // List of universities and their application links
+            const universities = [
+                { name: "University of Cape Town", url: "https://applyonline.uct.ac.za" },
+                { name: "University of the Western Cape", url: "https://student.uwc.ac.za" },
+                { name: "Stellenbosch University", url: "https://www.sun.ac.za/english" },
+                { name: "Cape Peninsula University of Technology", url: "https://www.cput.ac.za" },
+                { name: "University of Pretoria", url: "https://www.up.ac.za/apply" },
+                { name: "University of Johannesburg", url: "https://www.uj.ac.za/admissions" },
+                { name: "University of the Witwatersrand", url: "https://www.wits.ac.za/applications" },
+                { name: "Rhodes University", url: "https://www.ru.ac.za/admissiongateway" },
+                { name: "Nelson Mandela University", url: "https://www.mandela.ac.za/Application" },
+                { name: "Durban University of Technology", url: "https://www.dut.ac.za/student_portal" },
+                { name: "University of KwaZulu-Natal", url: "https://www.ukzn.ac.za/apply" },
+                { name: "University of Limpopo", url: "https://www.ul.ac.za/apply" },
+                { name: "University of Zululand", url: "https://www.unizulu.ac.za/apply" },
+                { name: "North-West University", url: "https://www.nwu.ac.za/apply" },
+                { name: "University of South Africa (UNISA)", url: "https://www.unisa.ac.za/apply" },
+                { name: "Walter Sisulu University", url: "https://www.wsu.ac.za/apply" },
+                { name: "Sol Plaatje University", url: "https://www.spu.ac.za/apply" },
+                { name: "University of Fort Hare", url: "https://www.ufh.ac.za/apply" },
+                { name: "Central University of Technology", url: "https://www.cut.ac.za/application-process" },
+                { name: "Vaal University of Technology", url: "https://www.vut.ac.za/apply" }
+            ];
+
+            // Dynamically generate links
+            const linksContainer = document.getElementById("university-links");
+            universities.forEach(university => {
+                const linkElement = document.createElement("a");
+                linkElement.href = university.url;
+                linkElement.target = "_blank"; // Open in a new tab
+                linkElement.textContent = university.name;
+                linksContainer.appendChild(linkElement);
+            });
+        } else {
+            // Display an alert and reload the page if the password is incorrect
+            alert("Incorrect password! Access denied.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected South African Universities Application Links</title>
+    <style>
+        body {
+            background-color: #001f4d; /* Dark blue background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: none; /* Initially hide the content */
+            overflow: hidden; /* Prevent scrolling with the animation */
+            position: relative; /* For positioning tennis ball */
+            height: 100vh;
+        }
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-top: 20px;
+            z-index: 10;
+        }
+        a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            text-decoration: none;
+            background-color: navy;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        a:hover {
+            background-color: darkblue;
+        }
+        .tennis-ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border: 3px solid white;
+            border-radius: 60%;
+            animation: bounce 5s infinite cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 1;
+        }
+        @keyframes bounce {
+            0% {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+            25% {
+                top: 0;
+                left: calc(80% - 50px);
+                transform: translate(0, 50%);
+            }
+            50% {
+                top: calc(100% - 50px);
+                left: calc(100% - 50px);
+                transform: translate(-50%, -50%);
+            }
+            75% {
+                top: calc(100% - 50px);
+                left: 0;
+                transform: translate(50%, 0);
+            }
+            100% {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tennis-ball"></div> <!-- Tennis ball in the background -->
+    <h1>South African Universities Application Portal</h1>
+    <div id="university-links"></div>
+
+    <script>
+        // Password to access the page
+        const password = "secureAccess123";
+
+        // Prompt user for password
+        const userPassword = prompt("Enter the password to access this page:");
+
+        if (userPassword === password) {
+            // Show the page content if the password is correct
+            document.body.style.display = "block";
+
+            // List of universities and their application links
+            const universities = [
+                { name: "University of Cape Town", url: "https://applyonline.uct.ac.za" },
+                { name: "University of the Western Cape", url: "https://student.uwc.ac.za" },
+                { name: "Stellenbosch University", url: "https://www.sun.ac.za/english" },
+                { name: "Cape Peninsula University of Technology", url: "https://www.cput.ac.za" },
+                { name: "University of Pretoria", url: "https://www.up.ac.za/apply" },
+                { name: "University of Johannesburg", url: "https://www.uj.ac.za/admissions" },
+                { name: "University of the Witwatersrand", url: "https://www.wits.ac.za/applications" },
+                { name: "Rhodes University", url: "https://www.ru.ac.za/admissiongateway" },
+                { name: "Nelson Mandela University", url: "https://www.mandela.ac.za/Application" },
+                { name: "Durban University of Technology", url: "https://www.dut.ac.za/student_portal" },
+                { name: "University of KwaZulu-Natal", url: "https://www.ukzn.ac.za/apply" },
+                { name: "University of Limpopo", url: "https://www.ul.ac.za/apply" },
+                { name: "University of Zululand", url: "https://www.unizulu.ac.za/apply" },
+                { name: "North-West University", url: "https://www.nwu.ac.za/apply" },
+                { name: "University of South Africa (UNISA)", url: "https://www.unisa.ac.za/apply" },
+                { name: "Walter Sisulu University", url: "https://www.wsu.ac.za/apply" },
+                { name: "Sol Plaatje University", url: "https://www.spu.ac.za/apply" },
+                { name: "University of Fort Hare", url: "https://www.ufh.ac.za/apply" },
+                { name: "Central University of Technology", url: "https://www.cut.ac.za/application-process" },
+                { name: "Vaal University of Technology", url: "https://www.vut.ac.za/apply" }
+            ];
+
+            // Dynamically generate links
+            const linksContainer = document.getElementById("university-links");
+            universities.forEach(university => {
+                const linkElement = document.createElement("a");
+                linkElement.href = university.url;
+                linkElement.target = "_blank"; // Open in a new tab
+                linkElement.textContent = university.name;
+                linksContainer.appendChild(linkElement);
+            });
+        } else {
+            // Display an alert and reload the page if the password is incorrect
+            alert("Incorrect password! Access denied.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
+
